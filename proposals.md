@@ -12,7 +12,7 @@
 ### Predictive
 * Can the popularity of a song on Spotify be predicted by its audio features? 
 
-	* At present, the features I intend to include are:
+	* At present, the features are:
 		* danceability
 		* energy
 		* key
@@ -37,11 +37,13 @@
 
 
 ## Approach
-Given the size of the dataset (300G), this work would be best done on an AWS instance, potentially leveraging Spark.
+Given the size of the dataset (300G), this work should be done on an AWS instance, potentially leveraging Spark.
+
+An adequate sample of songs will be chosen to represent a wide range of popularity, and those songs will be used to query the Spotify API to obtain the popularity score. The data will be merged and stored in a Postgres DB.
 
 I plan to compare different ML techniques, beginning with a simple Linear Regression, then escalating in feature complexity and model complexity, dictated by the results of the previous iteration. 
 
-If a linear relationship exists, I will explore the coefficients and p-values of each feature (and polynomials) to determine the best combination of predictors. 
+If a linear relationship exists, I will explore the coefficients and p-values of each feature (and polynomials), and use additional techniques to determine the best combination of predictors. 
 
 The popularity target ranges from 0-100, so I would also like to break the scores into ‘n’ equal classes and test out classification algorithms for prediction. 
 
@@ -86,7 +88,7 @@ The Million Song Dataset (+300G) is a freely-available collection of audio featu
 ### Predictive
 * Can a stock's price be accurately classified as going up or down?
 * What confidence threshold provides the best results?
-* Is the classifier's performance statistically significant when compared to random chance?
+* Is the classifier's performance statistically significant over random chance?
 
 ### Inferential 
 * Can we quantify the relationship between the features and response? 
@@ -94,6 +96,9 @@ The Million Song Dataset (+300G) is a freely-available collection of audio featu
 
 ## Approach
 
+I will begin with a vanilla Logistic Regression model, and escalate in feature and model complexity as dictated by the results of each iteration. 
+
+Some Linear Regression may be used to infer the relationships between the features and response, and thus assist in feature engineering. 
 
 ## How will people interact with the work?
 The narrative format with markdown and/or slides is well suited to describe the insights and outcomes. 
@@ -102,6 +107,6 @@ If all of the above questions can be answered, and an effective model reached ea
 
 ## Data Sources
 
-The Alpha Vantage API will provide up to 20 years of daily stock history, including price and many technical indicators.
+The Alpha Vantage API will provide up to 20 years of daily stock history, including price and many technical indicators. I will create a pipeline that collects stock data from the API, merges the indicators with the price info, and stores it in a Postgres DB.
 
 [Table of Contents^](#top)<br>
