@@ -110,6 +110,8 @@ I will begin with a simple Logistic Regression model, and escalate in feature an
 
 Some Linear Regression may be used to infer the relationships between the features and response, and thus assist in feature engineering. 
 
+Statistical tests, such as the t-test, will be used to compare against random chance.
+
 ## How will people interact with the work?
 The narrative format with markdown and/or slides is well suited to describe the insights and outcomes. 
 
