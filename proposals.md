@@ -1,45 +1,57 @@
-## Table of Contents
+<a name="top"></a>
+# Table of Contents
 [Spotify Song Popularity](#spotify)<br>
 [Psych Study - Emerging Adulthood](#eammi)<br>
-[Third Proposal](#third)<br>
+[Stock Movement](#stock)<br>
 
 ---
 <a name="spotify"></a>
 # Spotify Song Popularity
 
 ## Description
-Can the popularity of a song on Spotify be predicted by its audio features? 
+### Predictive
+* Can the popularity of a song on Spotify be predicted by its audio features? 
 
-At present, the features I intend to include are:
-* danceability
-* energy
-* key
-* loudness
-* mode
-* speechiness
-* acousticness
-* instrumentalness
-* liveness
-* valence
-* tempo
-* timbre
-* duration_ms
-* time_signature
+	* At present, the features I intend to include are:
+		* danceability
+		* energy
+		* key
+		* loudness
+		* mode
+		* speechiness
+		* acousticness
+		* instrumentalness
+		* liveness
+		* valence
+		* tempo
+		* timbre
+		* duration_ms
+		* time_signature
+
+### Inferential 
+* Is the relationship between the features and response linear?
+* Can we quantify the relationship between the features and response? 
+* Do some features contribute negatively?
+* Which features contribute most?
+
+
 
 ## Approach
+Given the size of the dataset (300G), this work would be best done on an AWS instance, potentially leveraging Spark.
+
 I plan to compare different ML techniques, beginning with a simple Linear Regression, then escalating in feature complexity and model complexity, dictated by the results of the previous iteration. 
 
-The popularity target ranges from 0-100, so I would also like to break the scores into ‘n’ equal classes and test out classification algorithms.
+If a linear relationship exists, I will explore the coefficients and p-values of each feature (and polynomials) to determine the best combination of predictors. 
 
-If possible, I would also like to get the predicted feature vector for various popularity ratings.
+The popularity target ranges from 0-100, so I would also like to break the scores into ‘n’ equal classes and test out classification algorithms for prediction. 
 
-Features -> Popularity Score <br>
-Popularity Score -> Features
+If possible, I would also like to predict feature vectors for given popularity ratings.
+
 
 
 ## How will people interact with the work?
 
-If I can develop an effective model, an interactive web app would be interesting. The user can manipulate sliders, buttons, or drop-down lists to dictate the features of their “song” that would be fed into the model to predict a popularity rating.
+If I can develop an effective predictive model, an interactive web app would be interesting. The user can manipulate sliders, buttons, or drop-down lists to dictate the features of their “song” that would be fed into the model to predict a popularity rating.
 
 A slide deck or markdown file can outline the process and insights found during the making of the model.
 
@@ -47,7 +59,9 @@ A slide deck or markdown file can outline the process and insights found during 
 
 The Million Song Dataset (+300G) is a freely-available collection of audio features and metadata for a million contemporary popular music tracks. Once I determine an adequate sample of tracks, I can query the Spotify API with each track name to obtain the popularity score.
 
+[Table of Contents^](#top)<br>
 
+---
 <a name="eammi"></a>
 # Psych Study - Emerging Adulthood 
 
@@ -62,17 +76,32 @@ The Million Song Dataset (+300G) is a freely-available collection of audio featu
 
 ## Data Sources
 
+[Table of Contents^](#top)<br>
 
-<a name="third"></a>
-# Third Proposal 
+---
+<a name="stock"></a>
+# Predicting Stock Movement 
 
 ## Description
+### Predictive
+* Can a stock's price be accurately classified as going up or down?
+* What confidence threshold provides the best results?
+* Is the classifier's performance statistically significant when compared to random chance?
 
+### Inferential 
+* Can we quantify the relationship between the features and response? 
+* Which features are most effective for classification?
 
 ## Approach
 
 
 ## How will people interact with the work?
+The narrative format with markdown and/or slides is well suited to describe the insights and outcomes. 
 
+If all of the above questions can be answered, and an effective model reached early enough in the week, a more ambitious result would be an interactive web app where the user can input a stock ticker and receive a classification score. Behind the scenes, the app would have to call the Alpha Vantage API to obtain the required features, run them through the pipeline, and receieve a prediction. 
 
 ## Data Sources
+
+The Alpha Vantage API will provide up to 20 years of daily stock history, including price and many technical indicators.
+
+[Table of Contents^](#top)<br>
