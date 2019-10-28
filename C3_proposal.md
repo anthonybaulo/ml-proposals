@@ -3,8 +3,8 @@ I am trying to extract descriptive features, such as musical genre, from songs b
 
 # How has this problem been solved before?
 The [Free Music Archive](https://arxiv.org/pdf/1612.01840.pdf) has provided an open benchmark dataset, making reproducible research possible, and therefore opening the doors to collaborative and independent research. In the paper, lower-bound scores of 52-63% accuracy on genre classification were cited for the medium dataset. These methods employed Linear Regression, KNN, SVM, and MLP, none of which were trained on the audio signal directly, but on features extracted from the audio signal, such as RMS energy and zero-crossing rate. 
-Due to the ease of access to the data, there is no shortage of research and references on the internet. 
-The competition [“WWW 2018 Challenge: Learning to Recognize Musical Genre”](https://www.crowdai.org/challenges/www-2018-challenge-learning-to-recognize-musical-genre) was held on the FMA dataset, with the top score being 1.31 Log Loss, and 0.63 F1 Score. Many different approaches were employed, including CNNs and XGBoost. At least two papers were published as a result of the contest: [1](https://doi.org/10.1145/3184558.3191823) , [2](https://doi.org/10.1145/3184558.3191822) 
+
+Due to the ease of access to the data, there is no shortage of research and references on the internet. The competition [“WWW 2018 Challenge: Learning to Recognize Musical Genre”](https://www.crowdai.org/challenges/www-2018-challenge-learning-to-recognize-musical-genre) was held on the FMA dataset, with the top score being 1.31 Log Loss, and 0.63 F1 Score. Many different approaches were employed, including CNNs and XGBoost. At least two papers were published as a result of the contest: [1](https://doi.org/10.1145/3184558.3191823) , [2](https://doi.org/10.1145/3184558.3191822) 
 Many educational articles, such as [this one](https://towardsdatascience.com/using-cnns-and-rnns-for-music-genre-recognition-2435fb2ed6af) also explore multiple techniques on this dataset, such as combining CNNs and RNNs.
 
 # What is new about your approach, why do you think it will be successful?
