@@ -1,11 +1,11 @@
 # What are you trying to do?
-I aim to classify an audio clip of music by genre. To do so, the audio clip will be converted to a Mel Spectrogram, a visual representation of audio, in order to leverage the feature detection of a Convolutional Neural Network (CNN). 
+I aim to classify an audio clip of music by genre, thus facilitating automatic content organization. To do so, the audio clip will be converted to a Mel Spectrogram, a visual representation of audio, in order to leverage the feature detection of a Convolutional Neural Network (CNN). 
 
 ![Image of Mel Spectrogram](https://miro.medium.com/max/1182/1*OOTqBsjpuXyfYJVdPxWtBA.png)
 
 
 # How has this problem been solved before?
-In the paper introducing the [Free Music Archive dataset](https://arxiv.org/abs/1612.01840), lower-bound scores of 52-63% accuracy on genre classification are cited for the medium dataset with 16 genres. These methods employed Linear Regression, KNN, SVM, and MLP, which were trained on features extracted from the audio signal, such as RMS energy and zero-crossing rate. 
+The paper introducing the [Free Music Archive dataset](https://arxiv.org/abs/1612.01840) cites lower-bound scores of 52-63% accuracy on genre classification on 16 genres (medium dataset). These methods employed Linear Regression, KNN, SVM, and MLP, which were trained on features extracted from the audio signal, such as RMS energy and zero-crossing rate. 
 
 In [this](https://towardsdatascience.com/using-cnns-and-rnns-for-music-genre-recognition-2435fb2ed6af) article, the author combines CNNs and Recurrent Neural Networks in series, as well as in parallel, to achieve 53% accuracy over 8 genres.
 
